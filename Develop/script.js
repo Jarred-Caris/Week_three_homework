@@ -14,9 +14,12 @@ function writePassword() {
     passwordText.value = "Invalid request, please try again";
   } else {
     passwordText.value = password;
+    console.log(validpassword);
   }
 }
+
 function generatePassword() {
+  var password = "";
   var passwordLength = parseInt(
     prompt("how many characters would you like to use?")
   );
@@ -56,7 +59,9 @@ function generatePassword() {
   for (var i = 0; i < passwordLength; i++) {
     var random = Math.floor(Math.random() * availableChars.length) + 1;
     console.log(random);
+    password += availableChars[random];
   }
+  return password;
 }
 
 // Add event listener to generate button
