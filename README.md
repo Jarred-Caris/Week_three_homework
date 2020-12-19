@@ -27,4 +27,4 @@ My page did not allow for too much creative freedom and focused more on the prog
 
 I would however be interested in going back through this when i am more competent to see ways i could reduce the amount of code and still maintain the same results.
 
-[click for page link] (https://jarred-caris.github.io/Week_two_homework/.)
+[click for page link] (https://jarred-caris.github.io/Week_three_homework/.)
