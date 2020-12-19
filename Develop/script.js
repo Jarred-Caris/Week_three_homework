@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+// variables for char select
 var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerChar = "abcdefghijklmnopqrstuvwxyz";
 var numberChar = "1234567890";
@@ -9,15 +10,14 @@ var specialChar = "!@#$%^&*()";
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  // code to return invalid request if min requirements arent met
   if (password === undefined) {
     passwordText.value = "Invalid request, please try again";
   } else {
     passwordText.value = password;
-    console.log(validpassword);
   }
 }
-
+// start of function prompting intial user input
 function generatePassword() {
   var password = "";
   var passwordLength = parseInt(
@@ -28,6 +28,7 @@ function generatePassword() {
     alert("Password must be between 8 and 128 characters ");
     return;
   }
+  // when correct character length selection is entered, trigger prompts
   if (passwordLength > 8 || passwordLength < 128) {
     var upperCharChoice = confirm("Do you want to use upper case letters");
     var lowerCharChoice = confirm("Do you want to use lower case letters");
@@ -57,7 +58,7 @@ function generatePassword() {
   }
   console.log(availableChars);
   for (var i = 0; i < passwordLength; i++) {
-    var random = Math.floor(Math.random() * availableChars.length) + 1;
+    var random = Math.floor(Math.random() * availableChars.length);
     console.log(random);
     password += availableChars[random];
   }
